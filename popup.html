@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Summarizer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Summarizer</h1>
+        <div class="settings">
+            <label for="apiKey">Gemini API Key:</label>
+            <input type="password" id="apiKey" placeholder="Enter your Gemini API Key">
+            <label for="mode">Summarization Mode:</label>
+            <select id="mode">
+                <option value="online">Online (Gemini API)</option>
+                <option value="offline">Offline (Local)</option>
+            </select>
+            <button id="saveSettings">Save Settings</button>
+        </div>
+        <button id="summarizeBtn">Summarize PDF</button>
+        <div id="status" class="status"></div>
+        <div id="summaryOutput" class="summary-output"></div>
+        <div class="actions">
+            <button id="copyBtn" disabled>Copy Summary</button>
+            <button id="downloadBtn" disabled>Download Summary</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
